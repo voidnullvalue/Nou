@@ -30,14 +30,35 @@ EXPECTED: dict[str, str] = {
     ),
     "12-return.nou": "early\n",
     "13-negate.nou": "true\n",
+    "14-snake.nou": (
+        "NO U SNAKE\n"
+        "A closure-linked snake, written entirely in No U.\n"
+        "+------------+\n"
+        "|            |\n"
+        "|            |\n"
+        "|            |\n"
+        "|            |\n"
+        "|  oo@   *   |\n"
+        "|            |\n"
+        "|            |\n"
+        "|            |\n"
+        "+------------+\n"
+        "Score: 0\n"
+        "Move with w/a/s/d; q quits.\n"
+        "Thanks for playing No U Snake.\n"
+    ),
+}
+
+INPUTS: dict[str, str] = {
+    "14-snake.nou": "q\n",
 }
 
 
-def run_file(path: pathlib.Path) -> str:
+def run_file(path: pathlib.Path, stdin: str = "") -> str:
     source = decode_source(path.read_bytes(), str(path))
     module = parse_source(source, str(path))
     out = io.StringIO()
-    interp = Interpreter(stdin=io.StringIO(""), stdout=out, filename=str(path))
+    interp = Interpreter(stdin=io.StringIO(stdin), stdout=out, filename=str(path))
     interp.run_module(module)
     return out.getvalue()
 
@@ -50,7 +71,15 @@ class ExampleTests(unittest.TestCase):
     def test_examples_produce_exact_output(self) -> None:
         for name, expected in sorted(EXPECTED.items()):
             with self.subTest(example=name):
-                self.assertEqual(run_file(EXAMPLES / name), expected)
+                self.assertEqual(
+                    run_file(EXAMPLES / name, INPUTS.get(name, "")),
+                    expected,
+                )
+
+    def test_snake_grows_after_eating(self) -> None:
+        output = run_file(EXAMPLES / "14-snake.nou", "d\nd\nd\nd\nq\n")
+        self.assertIn("Score: 1\n", output)
+        self.assertIn("|     ooo@   |\n", output)
 
     def test_immutable_error_example(self) -> None:
         with self.assertRaises(NoURuntimeError) as ctx:
