@@ -1,0 +1,8 @@
+no! Example 8: a five-parameter function summing its arguments, called
+with NOOOOOO UUUUUUUU. The sixth argument is popped and discarded;
+parameters arrive in the one- to five-space slots. !no
+nooooo uuuuuu
+	no u, no  u, nooo u, no   u, nooo u, no    u, nooo u, no     u, nooo u, NO      u
+	no	u, no      u, No, No, No, No, No, NOOOOOO UUUUUUUU
+NO U
+no u, !1!, !2!, !3!, !4!, !5!, !0!, NOOOOOO UUUUUUUU

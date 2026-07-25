@@ -1,0 +1,7 @@
+no! Example 6: countdown loop. NO u ! pops the condition before each
+iteration; the body's returned value (trailing space) feeds the next test. !no
+!3!, NO u
+no u
+NO u !
+	no	u, no u, No, No, No, No, No, NOOOOOO UUUUUUUU
+	no u, !-1!, nooo u, NO u 

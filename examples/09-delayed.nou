@@ -1,0 +1,10 @@
+no! Example 9: delayed assignment. A lone No line followed by a
+two-spaces-and-U line assigns the current value to the two-space
+binding when the current phase ends. !no
+!"first"!, NO  u
+no	u, no  u, No, No, No, No, No, NOOOOOO UUUUUUUU
+!"second"!
+No
+  U
+no	u, no  u, No, No, No, No, No, NOOOOOO UUUUUUUU
+ no	u, no  u, No, No, No, No, No, NOOOOOO UUUUUUUU

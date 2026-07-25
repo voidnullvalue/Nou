@@ -1,0 +1,7 @@
+no! Example 5: NO U ! pops a condition and runs its block when truthy. !no
+!1!
+NO U !
+	no	u, !"yes"!, No, No, No, No, No, NOOOOOO UUUUUUUU
+!0!
+NO U !
+	no	u, !"skipped"!, No, No, No, No, No, NOOOOOO UUUUUUUU

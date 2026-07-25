@@ -1,0 +1,7 @@
+no! Example 11: leading spaces defer statements to later phases;
+leading tabs open nested blocks that run right after their anchor. !no
+  no	u, !"phase two"!, No, No, No, No, No, NOOOOOO UUUUUUUU
+no	u, !"phase zero"!, No, No, No, No, No, NOOOOOO UUUUUUUU
+	 no	u, !"nested phase one"!, No, No, No, No, No, NOOOOOO UUUUUUUU
+	no	u, !"nested phase zero"!, No, No, No, No, No, NOOOOOO UUUUUUUU
+ no	u, !"phase one"!, No, No, No, No, No, NOOOOOO UUUUUUUU

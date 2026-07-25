@@ -1,0 +1,3 @@
+# Whitespace is semantically significant in No U source files.
+# Never normalize line endings or "fix" whitespace in these.
+*.nou -text

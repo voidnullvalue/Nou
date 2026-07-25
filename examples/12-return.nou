@@ -1,0 +1,7 @@
+no! Example 12: one trailing space returns from the enclosing block
+immediately; the second body statement never runs. !no
+nooooo uuuuuu
+	!"early"! 
+	no	u, !"never printed"!, No, No, No, No, No, NOOOOOO UUUUUUUU
+nou, NO u
+no	u, no u, No, No, No, No, No, NOOOOOO UUUUUUUU

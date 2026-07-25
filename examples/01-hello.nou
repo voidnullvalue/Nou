@@ -1,0 +1,3 @@
+no! Example 1: hello world. Load print (no<TAB>u), push the string
+and five padding nulls, then call with NOOOOOO UUUUUUUU. !no
+no	u, !"Hello, World!"!, No, No, No, No, No, NOOOOOO UUUUUUUU

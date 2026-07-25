@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nou-lang"
+version = "0.1.0"
+description = "No U — a deliberately irritating, whitespace-sensitive esoteric programming language"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "voidnullvalue" }]
+keywords = ["esoteric", "language", "interpreter", "whitespace"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Interpreters",
+]
+
+[project.urls]
+Repository = "https://github.com/voidnullvalue/nou"
+
+[project.scripts]
+nou = "nou.cli:main"
+
+[tool.setuptools]
+packages = ["nou"]
