@@ -24,7 +24,7 @@ nulls, and calls it with the six-argument invocation operator.)
   of source order.
 - Trailing whitespace changes statement behavior: one space returns, two
   spaces suppress, one tab negates. Three is a syntax error, obviously.
-- It is still deterministic, ships a real test suite (158 tests), exact
+- It is still deterministic, ships a real test suite (157 tests), exact
   diagnostics with visible-whitespace excerpts, a tracer, and a REPL.
 
 See [docs/language-reference.md](docs/language-reference.md) and
@@ -40,7 +40,7 @@ From a checkout:
 
 ```bash
 python -m nou run    examples/01-hello.nou
-python -m nou run    examples/14-snake.nou
+python -m nou run    examples/14-snake.nou --step-limit 100000000
 python -m nou check  examples/06-while.nou
 python -m nou tokens examples/01-hello.nou --show-whitespace
 python -m nou ast    examples/05-conditional.nou
