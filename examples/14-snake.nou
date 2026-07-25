@@ -1,0 +1,464 @@
+no! No U Snake: a turn-based terminal Snake clone using only the original operators and seven builtins. !no
+no! Controls: w/a/s/d move, q quits. Food movement is deterministic because No U has no randomness. !no
+no! Function bindings: <TAB><SP>=node, then one additional space for field, collision, trim-tail, and render. !no
+nooooo uuuuuu
+	no! make-node(x, y, next): capture values outside the selector function's parameter slots. !no
+	no u, NO			 U
+	no  u, NO			  U
+	no   u, NO			   U
+	nooooo uuuuuu 
+		no! node(selector): 0=x, 1=y, 2=next. !no
+		No, NO			    u
+		no u, !0!, !, !
+		NO U !
+			no			 u, NO			    u
+		no u, !1!, !, !
+		NO U !
+			no			  u, NO			    u
+		no u, !2!, !, !
+		NO U !
+			no			   u, NO			    u
+		no			    u 
+NO	 U
+nooooo uuuuuu
+	no! field(node, selector): call a node closure and recover output one. !no
+	no u, no  u, No, No, No, No, No, NOOOOOO UUUUUUUU
+	!, !  
+	!, !  
+	!, !  
+	!  
+	NO			 u
+	no			 u 
+NO	  U
+nooooo uuuuuu
+	no! collision(node, x, y): iterate the closure-linked snake. !no
+	no u, NO			 u
+	NO, NO			  u
+	NO, NO			   u
+	no			 u
+	NO u !
+		no	  u, no			 u, !0!, No, No, No, No, NOOOOOO UUUUUUUU
+		!, !  
+		!, !  
+		!, !  
+		!  
+		NO			    u
+		no			    u, no  u, !, !
+		NO U !
+			no	  u, no			 u, !1!, No, No, No, No, NOOOOOO UUUUUUUU
+			!, !  
+			!, !  
+			!, !  
+			!  
+			NO			     u
+			no			     u, no   u, !, !
+			NO U !
+				no, NO			  u
+		no			  u, !
+		NO U !
+			no	  u, no			 u, !2!, No, No, No, No, NOOOOOO UUUUUUUU
+			!, !  
+			!, !  
+			!, !  
+			!  
+			NO			 u
+		NO, NO			   u
+		no			  u, !
+		NO U !
+			no			 u, NO			   u
+		no			   u 
+	no			  u 
+NO	   U
+nooooo uuuuuu
+	no! trim-tail(node): reverse the prefix excluding the tail, then reverse it back. !no
+	no u, NO			 u
+	No, NO			  u
+	No, NO			   u
+	No, NO			    u
+	NO, NO			     u
+	No, NO			      u
+	No, NO			       u
+	no			 u
+	NO u !
+		no	  u, no			 u, !2!, No, No, No, No, NOOOOOO UUUUUUUU
+		!, !  
+		!, !  
+		!, !  
+		!  
+		NO			    u
+		NO, NO			     u
+		no			    u
+		NO U !
+			no	  u, no			 u, !0!, No, No, No, No, NOOOOOO UUUUUUUU
+			!, !  
+			!, !  
+			!, !  
+			!  
+			NO			      u
+			no	  u, no			 u, !1!, No, No, No, No, NOOOOOO UUUUUUUU
+			!, !  
+			!, !  
+			!, !  
+			!  
+			NO			       u
+			no	 u, no			      u, no			       u, no			  u, No, No, No, NOOOOOO UUUUUUUU
+			!, !  
+			!, !  
+			!, !  
+			!  
+			NO			  u
+			no			    u, NO			 u
+			no			 u, NO			     u
+		no			     u 
+	no			  u
+	NO u !
+		no	  u, no			  u, !0!, No, No, No, No, NOOOOOO UUUUUUUU
+		!, !  
+		!, !  
+		!, !  
+		!  
+		NO			      u
+		no	  u, no			  u, !1!, No, No, No, No, NOOOOOO UUUUUUUU
+		!, !  
+		!, !  
+		!, !  
+		!  
+		NO			       u
+		no	  u, no			  u, !2!, No, No, No, No, NOOOOOO UUUUUUUU
+		!, !  
+		!, !  
+		!, !  
+		!  
+		NO			    u
+		no	 u, no			      u, no			       u, no			   u, No, No, No, NOOOOOO UUUUUUUU
+		!, !  
+		!, !  
+		!, !  
+		!  
+		NO			   u
+		no			    u, NO			  u
+		no			  u 
+	no			   u 
+NO	    U
+nooooo uuuuuu
+	no! render(snake, width, height, food-x, food-y): build each row using countdown loops. !no
+	No, NO			 u
+	No, NO			  u
+	!"+"!, NO			   u
+	No, NO			    u
+	!0!, NO			     u
+	No, NO			      u
+	!""!, NO			       u
+	!0!, NO			        u
+	No, NO			         u
+	!" "!, NO			          u
+	NO, NO			           u
+	NO, NO			            u
+	!""!, NO			             u
+	no	  u, no u, !0!, No, No, No, No, NOOOOOO UUUUUUUU
+	!, !  
+	!, !  
+	!, !  
+	!  
+	NO			 u
+	no	  u, no u, !1!, No, No, No, No, NOOOOOO UUUUUUUU
+	!, !  
+	!, !  
+	!, !  
+	!  
+	NO			  u
+	no  u, NO			    u
+	no			    u
+	NO u !
+		no			   u, !"-"!, nooo u, NO			   u
+		no			    u, !-1!, nooo u, NO			    u
+		no			    u 
+	no			   u, !"+"!, nooo u, NO			   u
+	no	u, no			   u, No, No, No, No, No, NOOOOOO UUUUUUUU
+	!, !  
+	!, !  
+	!, !  
+	!  
+	!  
+	!0!, NO			     u
+	no   u, NO			      u
+	no			      u
+	NO u !
+		!"|"!, NO			       u
+		!0!, NO			        u
+		no  u, NO			         u
+		no			         u
+		NO u !
+			!" "!, NO			          u
+			no			        u, no			 u, !, !
+			NO U !
+				no			     u, no			  u, !, !
+				NO U !
+					!"@"!, NO			          u
+			no			          u, !" "!, !, !
+			NO U !
+				no	   u, no u, no			        u, no			     u, No, No, No, NOOOOOO UUUUUUUU
+				!, !  
+				!, !  
+				!, !  
+				!  
+				NO			           u
+				no			           u
+				NO U !
+					!"o"!, NO			          u
+			no			          u, !" "!, !, !
+			NO U !
+				no			        u, no    u, !, !
+				NO U !
+					no			     u, no     u, !, !
+					NO U !
+						!"*"!, NO			          u
+			no			       u, no			          u, nooo u, NO			       u
+			no			        u, !1!, nooo u, NO			        u
+			no			         u, !-1!, nooo u, NO			         u
+			no			         u 
+		no			       u, !"|"!, nooo u, NO			       u
+		no	u, no			       u, No, No, No, No, No, NOOOOOO UUUUUUUU
+		!, !  
+		!, !  
+		!, !  
+		!  
+		!  
+		no			     u, !1!, nooo u, NO			     u
+		no			      u, !-1!, nooo u, NO			      u
+		no			      u 
+	no	u, no			   u, No, No, No, No, No, NOOOOOO UUUUUUUU
+	!, !  
+	!, !  
+	!, !  
+	!  
+	!  
+	no			u, no		        u, No, No, No, No, No, NOOOOOO UUUUUUUU
+	!, !  
+	!, !  
+	!, !  
+	!  
+	NO			             u
+	!"Score: "!, no			             u, nooo u, NO			             u
+	no	u, no			             u, No, No, No, No, No, NOOOOOO UUUUUUUU
+	!, !  
+	!, !  
+	!, !  
+	!  
+	!  
+	no	u, !"Move with w/a/s/d; q quits."!, No, No, No, No, No, NOOOOOO UUUUUUUU
+	!, !  
+	!, !  
+	!, !  
+	!  
+	!  
+	No 
+NO	     U
+no! Game state uses <TAB><TAB><spaces>; helper temporaries use <TAB><TAB><TAB><spaces>. !no
+!12!, NO		  u
+!8!, NO		   u
+!8!, NO		    u
+!4!, NO		     u
+!1!, NO		      u
+!0!, NO		       u
+!0!, NO		        u
+no, NO		         u
+!4!, NO		          u
+!4!, NO		           u
+!""!, NO		            u
+NO, NO		             u
+NO, NO		              u
+No, NO		               u
+!0!, NO		                u
+!0!, NO		                 u
+NO, NO		                  u
+No, NO		 u
+no	 u, !2!, !4!, No, No, No, No, NOOOOOO UUUUUUUU
+!, !  
+!, !  
+!, !  
+!  
+NO		 u
+no	 u, !3!, !4!, no		 u, No, No, No, NOOOOOO UUUUUUUU
+!, !  
+!, !  
+!, !  
+!  
+NO		 u
+no	 u, !4!, !4!, no		 u, No, No, No, NOOOOOO UUUUUUUU
+!, !  
+!, !  
+!, !  
+!  
+NO		 u
+no	u, !"NO U SNAKE"!, No, No, No, No, No, NOOOOOO UUUUUUUU
+!, !  
+!, !  
+!, !  
+!  
+!  
+no	u, !"A closure-linked snake, written entirely in No U."!, No, No, No, No, No, NOOOOOO UUUUUUUU
+!, !  
+!, !  
+!, !  
+!  
+!  
+no		         u
+NO u !
+	no	     u, no		 u, no		  u, no		   u, no		    u, no		     u, No, NOOOOOO UUUUUUUU
+	!, !  
+	!, !  
+	!, !  
+	!  
+	!  
+	no		u, nou, NO		            u
+	NO, NO		             u
+	no		            u, !"q"!, !, !
+	NO U !
+		NO, NO		         u
+		no, NO		             u
+	no		            u, !"w"!, !, !
+	NO U !
+		!0!, NO		      u
+		!-1!, NO		       u
+		no, NO		             u
+	no		            u, !"a"!, !, !
+	NO U !
+		!-1!, NO		      u
+		!0!, NO		       u
+		no, NO		             u
+	no		            u, !"s"!, !, !
+	NO U !
+		!0!, NO		      u
+		!1!, NO		       u
+		no, NO		             u
+	no		            u, !"d"!, !, !
+	NO U !
+		!1!, NO		      u
+		!0!, NO		       u
+		no, NO		             u
+	no		             u, !
+	NO U !
+		no		         u
+		NO U !
+			no	u, !"Unknown command. Use w, a, s, d, or q."!, No, No, No, No, No, NOOOOOO UUUUUUUU
+			!, !  
+			!, !  
+			!, !  
+			!  
+			!  
+	no		             u
+	NO U !
+		no		         u
+		NO U !
+			no		          u, no		      u, nooo u, NO		                u
+			no		           u, no		       u, nooo u, NO		                 u
+			no		                u, no		  u, !, !
+			NO U !
+				!0!, NO		                u
+			no		                u, !-1!, !, !
+			NO U !
+				no		  u, !-1!, nooo u, NO		                u
+			no		                 u, no		   u, !, !
+			NO U !
+				!0!, NO		                 u
+			no		                 u, !-1!, !, !
+			NO U !
+				no		   u, !-1!, nooo u, NO		                 u
+			NO, NO		              u
+			no		                u, no		    u, !, !
+			NO U !
+				no		                 u, no		     u, !, !
+				NO U !
+					no, NO		              u
+			no	    u, no		 u, No, No, No, No, No, NOOOOOO UUUUUUUU
+			!, !  
+			!, !  
+			!, !  
+			!  
+			NO		               u
+			NO, NO		                  u
+			no		              u
+			NO U !
+				no	   u, no		 u, no		                u, no		                 u, No, No, No, NOOOOOO UUUUUUUU
+				!, !  
+				!, !  
+				!, !  
+				!  
+				NO		                  u
+			no		              u, !
+			NO U !
+				no	   u, no		               u, no		                u, no		                 u, No, No, No, NOOOOOO UUUUUUUU
+				!, !  
+				!, !  
+				!, !  
+				!  
+				NO		                  u
+			no		                  u
+			NO U !
+				no	u, !"Game over: you ran into yourself."!, No, No, No, No, No, NOOOOOO UUUUUUUU
+				!, !  
+				!, !  
+				!, !  
+				!  
+				!  
+				NO, NO		         u
+			no		                  u, !
+			NO U !
+				no		              u
+				NO U !
+					no	 u, no		                u, no		                 u, no		 u, No, No, No, NOOOOOO UUUUUUUU
+					!, !  
+					!, !  
+					!, !  
+					!  
+					NO		 u
+					no		        u, !1!, nooo u, NO		        u
+					no		    u, !1!, nooo u, NO		    u
+					no		    u, no		  u, !, !
+					NO U !
+						!0!, NO		    u
+					no		     u, !1!, nooo u, NO		     u
+					no		     u, no		   u, !, !
+					NO U !
+						!0!, NO		     u
+					no	   u, no		 u, no		    u, no		     u, No, No, No, NOOOOOO UUUUUUUU
+					!, !  
+					!, !  
+					!, !  
+					!  
+					NO		                  u
+					no		                  u
+					NO u !
+						no		    u, !1!, nooo u, NO		    u
+						no		    u, no		  u, !, !
+						NO U !
+							!0!, NO		    u
+						no		     u, !1!, nooo u, NO		     u
+						no		     u, no		   u, !, !
+						NO U !
+							!0!, NO		     u
+						no	   u, no		 u, no		    u, no		     u, No, No, No, NOOOOOO UUUUUUUU
+						!, !  
+						!, !  
+						!, !  
+						!  
+						NO		                  u
+						no		                  u 
+				no		              u, !
+				NO U !
+					no	 u, no		                u, no		                 u, no		               u, No, No, No, NOOOOOO UUUUUUUU
+					!, !  
+					!, !  
+					!, !  
+					!  
+					NO		 u
+				no		                u, NO		          u
+				no		                 u, NO		           u
+	no		         u 
+no	u, !"Thanks for playing No U Snake."!, No, No, No, No, No, NOOOOOO UUUUUUUU
+!, !  
+!, !  
+!, !  
+!  
+!  
